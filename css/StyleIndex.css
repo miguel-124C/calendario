@@ -1,0 +1,181 @@
+body{
+    background-color: #000;
+}
+.Header{
+    background-image: url("../img/Codigo_java_propietario_fjgb.jpg");
+    position: sticky;
+    top: 0;
+    margin: 0;
+    height: 150px;
+    z-index: 100;
+    
+}
+.cont__titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.titulo{
+    color: #fff;
+    letter-spacing: 25px;
+    font-size: 5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*meses definidos*/
+
+.Main{
+    transform: translateY(80px);
+    height: 100%;   
+}
+.main__meses{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: grid;
+    padding-bottom: 100px;
+    grid-template-columns: repeat(auto-fill, 490px);   
+    grid-gap: 30px;
+}
+
+.meses{
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(7,70px);
+    grid-template-rows: 75px 25px repeat(6, 50px);
+    transition-property: all;
+    transition-duration: .5s;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.meses__text-mes{
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-size: 50px;
+    grid-column: 1/span 7;
+    grid-row: span 1;
+    background: #29e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.meses__text-dias{
+    background-color: #555;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    font-size: 15px;
+}
+
+.meses__num-dias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 500;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+
+
+/*hovers*/
+
+.meses:hover{
+    box-shadow: 0px 0px 50px 30px #000;
+    border-bottom-left-radius: 50%;
+    transform: scale(1.02, 1.02); 
+}
+
+
+@media screen and (max-width:560px) and (min-width:460px) {
+    .main__meses{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        display: grid;
+        padding-bottom: 100px;
+        grid-template-columns: repeat(auto-fill,420px);   
+        grid-gap: 30px;
+    }
+    .meses{
+        height: 400px;
+        display: grid;
+        min-width: 350px;
+        grid-template-columns: repeat(7,60px);
+        grid-template-rows: 75px 25px repeat(6, 50px);
+        transition-property: all;
+        transition-duration: .5s;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+}
+
+@media screen and (max-width:460px) and (min-width:380px) {
+    .main__meses{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        display: grid;
+        padding-bottom: 100px;
+        grid-template-columns: repeat(auto-fill,350px);   
+        grid-gap: 30px;
+    }
+    .meses{
+        height: 340px;
+        display: grid;
+        min-width: 350px;
+        grid-template-columns: repeat(7,50px);
+        grid-template-rows: 75px 25px repeat(6, 40px);
+        transition-property: all;
+        transition-duration: .5s;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+}
+
+
+@media screen and (max-width:380px) {
+    .main__meses{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        display: grid;
+        padding-bottom: 100px;
+        grid-template-columns: repeat(auto-fill, 210px);   
+        grid-gap: 30px;
+    }
+    .meses{
+        height: 240px;
+        display: grid;
+        min-width: none;
+        grid-template-columns: repeat(7,30px);
+        grid-template-rows: 50px 10px repeat(6, 30px);
+        transition-property: all;
+        transition-duration: .5s;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+    .meses__text-mes{
+        font-size: 40px;
+    }
+    
+    .meses__text-dias{
+        font-size: 6px;
+    }
+    
+    .meses__num-dias{
+        font-size: 15px;
+        font-weight: 100;
+    }
+    
+}
